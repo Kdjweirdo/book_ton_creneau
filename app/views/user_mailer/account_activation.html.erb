@@ -1,0 +1,10 @@
+<h1>Book Ton Creneau</h1>
+
+<p>Salut <%= @user.prenom %>,</p>
+
+<p>
+Welcome to Book ton Creneau! Cliques sur le lien ci-dessous pour activer ton compte:
+</p>
+
+<%= link_to "Activer", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
